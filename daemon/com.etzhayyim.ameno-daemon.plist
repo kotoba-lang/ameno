@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  launchd template for ameno-daemon (ADR-2605191229).
+
+  Install:
+    cp com.etzhayyim.ameno-daemon.plist ~/Library/LaunchAgents/
+    # then edit the file to substitute YOUR_USERNAME and YOUR_REPO_PATH.
+    launchctl load ~/Library/LaunchAgents/com.etzhayyim.ameno-daemon.plist
+
+  Status:    launchctl list | grep ameno-daemon
+  Logs:      tail -f ~/.ameno/daemon.stdout.log ~/.ameno/daemon.stderr.log
+  Stop:      launchctl unload ~/Library/LaunchAgents/com.etzhayyim.ameno-daemon.plist
+-->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.etzhayyim.ameno-daemon</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <!-- Replace with `which bun` or `/opt/homebrew/bin/bun` or the
+         absolute path to your bun binary. For Node fallback use
+         /usr/local/bin/node + ["--experimental-strip-types", ...] -->
+    <string>/opt/homebrew/bin/bun</string>
+    <string>run</string>
+    <string>/Users/YOUR_USERNAME/YOUR_REPO_PATH/60-apps/etzhayyim-project-ameno/daemon/src/server.ts</string>
+  </array>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>AMENO_HOME</key>
+    <string>/Users/YOUR_USERNAME/.ameno</string>
+    <key>AMENO_PORT</key>
+    <string>12480</string>
+    <key>AMENO_HOST</key>
+    <string>127.0.0.1</string>
+    <key>AMENO_MODEL</key>
+    <string>gemma3:4b</string>
+    <key>OLLAMA_BASE_URL</key>
+    <string>http://localhost:11434</string>
+    <key>PATH</key>
+    <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+  </dict>
+
+  <key>RunAtLoad</key>
+  <true/>
+
+  <key>KeepAlive</key>
+  <dict>
+    <key>SuccessfulExit</key>
+    <false/>
+    <key>NetworkState</key>
+    <true/>
+  </dict>
+
+  <key>StandardOutPath</key>
+  <string>/Users/YOUR_USERNAME/.ameno/daemon.stdout.log</string>
+
+  <key>StandardErrorPath</key>
+  <string>/Users/YOUR_USERNAME/.ameno/daemon.stderr.log</string>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/YOUR_USERNAME/YOUR_REPO_PATH/60-apps/etzhayyim-project-ameno/daemon</string>
+
+  <key>ProcessType</key>
+  <string>Background</string>
+</dict>
+</plist>

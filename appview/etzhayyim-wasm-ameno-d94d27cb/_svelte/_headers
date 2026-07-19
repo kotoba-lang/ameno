@@ -1,0 +1,7 @@
+# Cloudflare Pages / Workers Assets headers — Cross-Origin Isolation
+# for WebGPU + threaded WASM + SharedArrayBuffer (ADR-2605190824).
+# `credentialless` lets cross-origin model bundles (HF, jsdelivr) load
+# without their own CORP headers, fetched without credentials.
+/*
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: credentialless

@@ -1,0 +1,37 @@
+{
+  "name": "kotodama-d94d27cb",
+  "main": "svelte/.svelte-kit/cloudflare/_worker.js",
+  "compatibility_date": "2025-03-17",
+  "compatibility_flags": [
+    "nodejs_compat",
+    "nodejs_als"
+  ],
+  "assets": {
+    "directory": "./svelte/.svelte-kit/cloudflare/client",
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "none"
+  },
+  "vars": {
+    "APP_CAPABILITIES": "[\"browser-webgpu-inference\",\"onnx-runtime\",\"multimodal-text-image-audio\",\"per-actor-lora\",\"rag-context-injection\"]",
+    "APP_DESCRIPTION": "Browser WebGPU inference — Gemma 4 E2B / E4B multimodal (text + image + audio), fully client-side via transformers.js ONNX. Per-actor LoRA merge + RAG context injection. Murakumo Tier 2 (crowd-sourced browser compute).",
+    "APP_DISPLAY_NAME": "Ameno",
+    "APP_EMBED_URL": "https://d94d27cb.etzhayyim.com/?embed=1",
+    "APP_FRAMEWORK": "sveltekit-edge-bff",
+    "APP_NANOID": "d94d27cb",
+    "APP_PERFORMER_TYPE": "service",
+    "APP_UI_TYPE": "appview",
+    "APP_VERSION": "0.1.0",
+    "AGENTGATEWAY_MCP_ROUTER_URL": "https://mcp.etzhayyim.com/xrpc/com.etzhayyim.mcp.message"
+  },
+  "routes": [
+    {
+      "pattern": "d94d27cb.etzhayyim.com/*",
+      "zone_name": "etzhayyim.com"
+    },
+    {
+      "pattern": "ameno.etzhayyim.com/*",
+      "zone_name": "etzhayyim.com"
+    }
+  ]
+}

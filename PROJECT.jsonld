@@ -1,0 +1,10 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ameno",
+  "url": "https://ameno.etzhayyim.com",
+  "description": "Browser WebGPU inference platform — Gemma 4 E2B multimodal via transformers.js ONNX, per-actor LoRA merge, RAG context injection",
+  "applicationCategory": "BrowserInference",
+  "operatingSystem": "Web (WebGPU)",
+  "softwareRequirements": "WebGPU-capable browser"
+}

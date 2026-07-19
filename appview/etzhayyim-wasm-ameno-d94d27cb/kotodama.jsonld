@@ -1,0 +1,30 @@
+{
+  "@context": "https://etzhayyim.com/ns/kotodama/v1",
+  "@id": "did:web:ameno.etzhayyim.com",
+  "name": "ameno",
+  "nanoid": "d94d27cb",
+  "runtimeType": "worker",
+  "uiType": "appview",
+  "performerType": "service",
+  "embedUrl": "https://d94d27cb.etzhayyim.com/?embed=1",
+  "profile": {
+    "displayName": "Ameno",
+    "description": "Browser-side WebGPU inference — Gemma 4 E2B / E4B multimodal (text + image + audio), fully client-side via transformers.js ONNX. Murakumo Tier 2 crowd-sourced browser compute.",
+    "capabilities": ["inference", "webgpu", "multimodal", "per-actor-lora", "rag-context-injection"],
+    "isBot": true,
+    "agentType": "autonomous"
+  },
+  "space": {
+    "name": "Ameno",
+    "joinRule": "public"
+  },
+  "triggers": {
+    "subscribeRepos": {
+      "collections": [
+        "app.bsky.feed.post",
+        "app.bsky.feed.like",
+        "com.etzhayyim.apps.ameno.inferenceResult"
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "ameno-ui",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@etzhayyim/ameno": "workspace:*",
+    "@huggingface/transformers": "^3.8.1",
+    "@langchain/core": "^1.1.47",
+    "@langchain/langgraph": "^1.3.1",
+    "@langchain/langgraph-checkpoint": "^1.0.3",
+    "@mediapipe/tasks-genai": "^0.10.27",
+    "@noble/curves": "^2.2.0",
+    "@noble/hashes": "^2.2.0",
+    "@scure/base": "^2.2.0"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^5.1.1",
+    "@webgpu/types": "^0.1.69",
+    "svelte": "^5.56.0",
+    "typescript": "^5.9.3",
+    "vite": "^8.0.14"
+  }
+}
