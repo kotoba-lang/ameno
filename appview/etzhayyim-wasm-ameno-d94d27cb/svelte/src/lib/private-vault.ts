@@ -4,7 +4,7 @@
  * Implements the etzhayyim `signal:v1:{ciphertext}` field convention
  * (10-protocol/atproto/src/signal.ts) for ameno inference outputs that
  * the user marks as private. The server only sees ciphertext; per the
- * Vault zero-knowledge invariant in CLAUDE.md, plaintext / raw key
+ * Vault zero-knowledge invariant in AGENTS.md, plaintext / raw key
  * never leave the client.
  *
  * Storage: a 256-bit AES-GCM key per browser origin, persisted in
